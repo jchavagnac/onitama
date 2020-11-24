@@ -15,6 +15,7 @@ public class Onitama {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //je suis un code frero
         // TODO code application logic here
     }
     
