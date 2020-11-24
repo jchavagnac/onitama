@@ -9,6 +9,6 @@ package onitama;
  *
  * @author mathi
  */
-public class Pièce {
+public class Pièces {
     
 }
