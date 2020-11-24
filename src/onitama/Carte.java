@@ -11,4 +11,5 @@ package onitama;
  */
 public class Carte {
     
+    
 }

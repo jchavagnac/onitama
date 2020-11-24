@@ -10,5 +10,14 @@ package onitama;
  * @author mathi
  */
 public class Echiquier {
+    caze [][]Cellules = new caze[5][5];
     
+    public Echiquier(){
+        
+        for (int i = 1; i<5; i++){
+            for (int j = 0; j<6; j++){
+                Cellules[i][j]=new caze(null,false,false);
+            }
+        }
+    }
 }
