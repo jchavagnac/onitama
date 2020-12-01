@@ -18,12 +18,12 @@ public class Carte {
                 motif[i][j]=0;
             }
     } //s
-}
+
         for (int i = 0; i<tabCoupsValides.length ; i++) {   
             int x = tabCoupsValides[i][0];
             int y = tabCoupsValides[i][1];
             motif[x][y] = 1;     
-            System.out.println("ajout de motif" + x + ", " + y + " sur " + LeNom)
+            System.out.println("ajout de motif" + x + ", " + y + " sur " + Nom);
 }
 }   
-
+}

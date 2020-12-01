@@ -33,9 +33,7 @@ public class Onitama {
         Partie game = new Partie();
         game.ListeJoueurs[0] = Joueur1;
         game.ListeJoueurs[1] = Joueur2;
-    public static void main(String[] args) {
-        //je suis un code frero
-        // TODO code application logic here
-    }
+        
     
+}
 }

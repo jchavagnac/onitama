@@ -21,4 +21,10 @@ public Pièces(String couleur) { //constructeur
 public String lireCouleur(){ //retourne la couleur
         return COULEUR;
     }
+@Override
+    public String toString(){// les couleurs des joueurs 
+        if("Rouge".equals(COULEUR))// rouge pour le joueur 2
+            return "\u001B[31m O "; // jaune pour le j1
+        return "\u001B[33m O ";
+    }
 }

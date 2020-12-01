@@ -27,19 +27,16 @@ public class Echiquier {
                 if (Cellules[i][j].pieceCourante != null) {                   
                     System.out.print(Cellules[i][j].pieceCourante);
                 }
-                else if(Cellules[i][j].desintegrateur==true){
-                    System.out.print("\u001B[0m D ");// D pour desintegrateurs
-                }
-                else{
-                    System.out.print("\u001B[0m N ");// N pour rien 
+                
             }  
         }System.out.println();// afficher le tout
     }
-    }
+    
     public void viderGrille(){ //Cette méthode vide la grille de son contenu
         for (int i=1; i<6;i++){
             for (int j=1;j<7;j++){
                    Cellules[i][j]=null;
             }
     }
+}
 }
