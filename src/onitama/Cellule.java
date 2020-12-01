@@ -32,9 +32,16 @@ public class Cellule {
        }
 }
        public Pièces recupererPièce(){
-        Pièces unJeton= jetonCourant; 
-        jetonCourant=null;
-        return unJeton;// renvoyé le jeton qui a été ou non placer
+        Pièces unepiece= pieceCourante; 
+        pieceCourante=null;
+        return unepiece;// renvoyé la piece qui a été ou non placer
     }
+    public String lirecouleurpiece(){
+        if(pieceCourante == null){
+            return "vide";// pas de couleur envoyer nul sinon renvoyer la couleur
+        }
+        return pieceCourante.COULEUR;
+ }     
+    
 }
-}
+
