@@ -49,3 +49,4 @@ public class Partie {
             GrilleDeJeu.viderGrille();
         }
     }
+}
