@@ -12,6 +12,7 @@ package onitama;
 public class Echiquier {
     caze [][]Cellules = new caze[5][5];
     
+    
     public Echiquier(){
         
         for (int i = 1; i<5; i++){
@@ -19,5 +20,9 @@ public class Echiquier {
                 Cellules[i][j]=new caze(null,false,false);
             }
         }
+    }
+    public void temple(){
+        Cellules[0][2]=templebleu;
+        Cellules[4][2]=templerouge;
     }
 }
