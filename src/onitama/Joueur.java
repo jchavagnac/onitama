@@ -10,14 +10,17 @@ package onitama;
  * @author mathi
  */
 public class Joueur {
+   
    String nom;
    String couleur;
    Pièces []ListePièces = new Pièces[5];
    int nombrePiècesrestant;
+   Joueur[] ListeJoueurs;
+   ;
    
 public Joueur(String Nom){
        nom = Nom;
-       
+     
    }
 public void affecterCouleur(String Couleur){
        this.couleur = Couleur;

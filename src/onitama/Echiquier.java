@@ -36,4 +36,10 @@ public class Echiquier {
         }System.out.println();// afficher le tout
     }
     }
+    public void viderGrille(){ //Cette méthode vide la grille de son contenu
+        for (int i=1; i<6;i++){
+            for (int j=1;j<7;j++){
+                   Cellules[i][j]=null;
+            }
+    }
 }
