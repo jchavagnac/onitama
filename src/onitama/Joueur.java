@@ -25,5 +25,11 @@ public Joueur(String Nom){
 public void affecterCouleur(String Couleur){
        this.couleur = Couleur;
    }
-   
+    public void ajouter_pieces(Pièces jeton){// on ajoute les 21 jetons aux joueurs
+         for (int i=0;i<ListePièces.length;i++)
+            if (ListePièces[i]==null){
+                ListePièces[i]=jeton;
+                break;
+            }
+            }
 }
