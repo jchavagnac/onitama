@@ -10,6 +10,7 @@ package onitama;
  * @author mathi
  */
 public class caze {
+    caze cellules;
 
     caze(Object object, boolean b, boolean b0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

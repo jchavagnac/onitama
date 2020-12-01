@@ -10,6 +10,7 @@ package onitama;
  * @author mathi
  */
 public class Carte {
-    
-    
+    Carte carte;
+   
 }
+
