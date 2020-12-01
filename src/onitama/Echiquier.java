@@ -10,19 +10,30 @@ package onitama;
  * @author mathi
  */
 public class Echiquier {
-    caze [][]Cellules = new caze[5][5];
+    Pièces pieceCourante;
+    Cellule [][]Cellules = new Cellule[5][5];
     
     
-    public Echiquier(){
-        
-        for (int i = 1; i<5; i++){
-            for (int j = 0; j<6; j++){
-                Cellules[i][j]=new caze(null,false,false);
+     public Echiquier(){// constructeur grille qui crée les cellules
+        for (int i=0;i<6;i++){
+            for (int j=0;j<7;j++){
+                Cellules[i][j]=new Cellule();
             }
         }
     }
-    public void temple(){
-        Cellules[0][2]=templebleu;
-        Cellules[4][2]=templerouge;
+    public void afficherGrilleSurConsole(){// affichage
+        for (int i=0; i <6; i++) { 
+            for (int j =0;j < 7; j++){
+                if (Cellules[i][j].pieceCourante != null) {                   
+                    System.out.print(Cellules[i][j].pieceCourante);
+                }
+                else if(Cellules[i][j].desintegrateur==true){
+                    System.out.print("\u001B[0m D ");// D pour desintegrateurs
+                }
+                else{
+                    System.out.print("\u001B[0m N ");// N pour rien 
+            }  
+        }System.out.println();// afficher le tout
+    }
     }
 }
