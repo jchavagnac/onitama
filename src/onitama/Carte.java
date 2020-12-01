@@ -17,7 +17,7 @@ public class Carte {
             for (int j=0; j<5; j++) {
                 motif[i][j]=0;
             }
-    }
+    } //s
 }
         for (int i = 0; i<tabCoupsValides.length ; i++) {   
             int x = tabCoupsValides[i][0];
