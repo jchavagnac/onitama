@@ -10,5 +10,15 @@ package onitama;
  * @author mathi
  */
 public class Pièces {
+    String COULEUR;
     
+
+public Pièces(String couleur) { //constructeur
+    
+    COULEUR = couleur;
+    
+}
+public String lireCouleur(){ //retourne la couleur
+        return COULEUR;
+    }
 }
