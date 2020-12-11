@@ -13,7 +13,7 @@ public class Carte {
     int[][] tabDeplacement;
     
     
-    public Carte(String Nom){        
+    public Carte(int[][] tabDeplacement, String Nom){        
         for (int i = 0; i<5; i++){
             for (int j = 0; j<5; j++){
                 tabDeplacement[i][j] = 0;
@@ -21,10 +21,10 @@ public class Carte {
         }
     }
     
-    public void Motifcarte(Carte laCarte){        
-        for (int i=0; i< tabDeplacement.length; i++){
-             int x = tabDeplacement[i][0];
-             int y = tabDeplacement[i][1];
+    public void Motifcarte(Carte laCarte, int[][] deplacementjoueur){        
+        for (int i=0; i< deplacementjoueur.length; i++){
+             int x = deplacementjoueur[i][0];
+             int y = deplacementjoueur[i][1];
              laCarte.tabDeplacement[x][y]=1;       
             }
         }    
