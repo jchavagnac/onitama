@@ -10,20 +10,23 @@ package onitama;
  * @author mathi
  */
 public class Carte {
-    String Nom;
-    int[][] motif = new int[5][5];
-    public Carte(String LeNom , int[][] tabCoupsValides){
-        for (int i=0; i<5; i++) {
-            for (int j=0; j<5; j++) {
-                motif[i][j]=0;
+    int[][] tabDeplacement;
+    
+    
+    public Carte(int[][] tabDeplacement, String Nom){        
+        for (int i = 0; i<5; i++){
+            for (int j = 0; j<5; j++){
+                tabDeplacement[i][j] = 0;
             }
-    } //s
-
-        for (int i = 0; i<tabCoupsValides.length ; i++) {   
-            int x = tabCoupsValides[i][0];
-            int y = tabCoupsValides[i][1];
-            motif[x][y] = 1;     
-            System.out.println("ajout de motif" + x + ", " + y + " sur " + Nom);
-}
+        }
+    }
+    
+    public void definirMotif(Carte uneCarte, int[][] tabCoup){        
+        for (int i=0; i< tabCoup.length; i++){
+             int x = tabCoup[i][0];
+             int y = tabCoup[i][1];
+             uneCarte.tabDeplacement[x][y]=1;       
+            }
+        }    
+    
 }   
-}
