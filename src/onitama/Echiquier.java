@@ -21,7 +21,7 @@ public class Echiquier {
             }
         }
     }
-    public void afficherGrilleSurConsole(){// affichage
+    public void afficherEchiquierSurConsole(){// affichage
         for (int i=0; i <6; i++) { 
             for (int j =0;j < 7; j++){
                 if (Cellules[i][j].pieceCourante != null) {                   
