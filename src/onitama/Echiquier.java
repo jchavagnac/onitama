@@ -39,4 +39,16 @@ public class Echiquier {
             }
     }
 }
+
+    void deplacerpiece(int ligneA, int colA, Pièces) { 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void casenull(int ligneA, int colA) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void lirepiece(int ligneA, int colA) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

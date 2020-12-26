@@ -94,28 +94,34 @@ public class Partie {
                 
                 while ( valide != true){
                 
-                System.out.println("C'est au tour de " + JoueurCourant.nom + " de jouer.\n"
-                        + JoueurCourant.nom+" possède 5 pions et un roi"
-                        + " \n-Pour jouer, rentre la ligne,enter, puis la colonne de la pièce que tu souhaites déplacer"
-                        + " \n-dans un second temps, enter, rentre la ligne, enter, puis la colonne de ou tu souhaites déplacer la pièce");
+                    System.out.println("C'est au tour de " + JoueurCourant.nom + " de jouer.\n"
+                            + JoueurCourant.nom+" possède 5 pions et un roi"
+                            + " \n-Pour jouer, rentre la ligne,enter, puis la colonne de la pièce que tu souhaites déplacer"
+                            + " \n-dans un second temps, enter, rentre la ligne, enter, puis la colonne de ou tu souhaites déplacer la pièce");
                 
-                //Tour de jeu du joueur
+                    //Tour de jeu du joueur
                 
                 
-                int ligneA = scan.nextInt()-1;
-                int colA = scan.nextInt()-1;
-                int ligneB = scan.nextInt()-1;
-                int colB = scan.nextInt()-1;
+                    int ligneA = scan.nextInt()-1;
+                    int colA = scan.nextInt()-1;
+                    int ligneB = scan.nextInt()-1;
+                    int colB = scan.nextInt()-1;
                 
-                if ((ligneA<6 && 0<ligneA) && (ligneB<6 && 0<ligneB)&& (colA<6 && 0<colA)&& (colB<6 && 0<colB)){
-                    valide=true;
-                }
-                else {
-                    System.out.println("Veuillez choisir des colonnes et lignes entre 1 et 5");
-                }
-                // D2PLACEMENT DU PION
+                    if ((ligneA<6 && 0<ligneA) && (ligneB<6 && 0<ligneB)&& (colA<6 && 0<colA)&& (colB<6 && 0<colB)){ // Pour l'instant ca mais idéalement pour col A et ligne A,
+                    //vérifier que la position choisie correspond bien à une pièce du joueur.
+                    
+                        valide=true;
+                    }else {
+                        System.out.println("Veuillez choisir des colonnes et lignes entre 1 et 5");
+                    }
+                // DEPLACEMENT DU PION
                 
                 //CAS 1 : la case est vide
+                if (GrilleDeJeu.Cellules[ligneB][colB].pieceCourante == null) {
+                    GrilleDeJeu.lirepiece(ligneA, colA);
+                    GrilleDeJeu.deplacerpiece(ligneB,colB);
+                    GrilleDeJeu.casenull(ligneA, colA);
+                }
                 
                 //CAS 2 : il y a un pion sur la case
                     // sous CAS 1 : c'est un pion
