@@ -78,13 +78,53 @@ public class Partie {
         System.out.println("Bienvenue à toi "+ListeJoueurs[1].nom+"!");
         
         GrilleDeJeu.afficherEchiquierSurConsole();
+        
         //Lancement de la boucle de jeu
+        
         while (cajouemec){
+            
             //Pour chaque occurence de la boucle while, on parcours le tableau
             //ListeJoueurs pour faire jouer les deux joueurs
+            
             for (Joueur i : ListeJoueurs) {
+                
+                JoueurCourant = i;
+                
+                boolean valide = false;
+                
+                while ( valide != true){
+                
+                System.out.println("C'est au tour de " + JoueurCourant.nom + " de jouer.\n"
+                        + JoueurCourant.nom+" possède 5 pions et un roi"
+                        + " \n-Pour jouer, rentre la ligne,enter, puis la colonne de la pièce que tu souhaites déplacer"
+                        + " \n-dans un second temps, enter, rentre la ligne, enter, puis la colonne de ou tu souhaites déplacer la pièce");
+                
+                //Tour de jeu du joueur
+                
+                
+                int ligneA = scan.nextInt()-1;
+                int colA = scan.nextInt()-1;
+                int ligneB = scan.nextInt()-1;
+                int colB = scan.nextInt()-1;
+                
+                if ((ligneA<6 && 0<ligneA) && (ligneB<6 && 0<ligneB)&& (colA<6 && 0<colA)&& (colB<6 && 0<colB)){
+                    valide=true;
+                }
+                else {
+                    System.out.println("Veuillez choisir des colonnes et lignes entre 1 et 5");
+                }
+                // D2PLACEMENT DU PION
+                
+                //CAS 1 : la case est vide
+                
+                //CAS 2 : il y a un pion sur la case
+                    // sous CAS 1 : c'est un pion
+                    // sous CAS 2 : c'est un roi (Winning time)
+                    // sous CAS 3 : c'est une pièce appartenant au joueur courant
+                
+                //CAS 3 : le roi bouge sur la case du temple (Winning time)
+}  
             }
- }
- }
+        }
+    }
 }
-    
