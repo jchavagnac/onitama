@@ -40,8 +40,8 @@ public class Echiquier {
     }
 }
 
-    void deplacerpiece(int ligneA, int colA, Pièces) { 
-        
+    void deplacerpiece(int ligneA, int colA, Pièces piece) { 
+        Cellules[ligneA][colA].affecterpiece(piece)
     }
 
     void casenull(int ligneA, int colA) {
