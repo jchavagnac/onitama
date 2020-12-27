@@ -46,7 +46,7 @@ public class Echiquier {
 
     void casenull(int ligneA, int colA) {
         Cellule cvide = new Cellule();
-        Cellules[ligneA][colA]=cvide;
+        Cellules[ligneA][colA]=cvide; //remplace la cellule avec une cellule vide nouvellement crée
     }
 
     public String[] lirepiece(int ligneA, int colA) {

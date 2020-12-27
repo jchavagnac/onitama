@@ -42,6 +42,12 @@ public class Cellule {
         }
         return pieceCourante.COULEUR;
  }     
+    public String liretypepiece(){
+        if(pieceCourante == null){
+            return "vide";
+        }
+        return pieceCourante.TYPE; //renvoi le type de la pièce, "vide" si case vide.
+ } 
     
 }
 

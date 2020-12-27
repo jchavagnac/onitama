@@ -11,12 +11,11 @@ package onitama;
  */
 public class Pièces {
     String COULEUR;
-    
+    String TYPE;
 
-public Pièces(String couleur) { //constructeur
-    
+public Pièces(String couleur,String type) { //constructeur
     COULEUR = couleur;
-    
+    TYPE = type;
 }
 public String lireCouleur(){ //retourne la couleur
         return COULEUR;
