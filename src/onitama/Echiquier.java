@@ -41,14 +41,18 @@ public class Echiquier {
 }
 
     void deplacerpiece(int ligneA, int colA, Pièces) { 
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     void casenull(int ligneA, int colA) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Cellule cvide = new Cellule();
+        Cellules[ligneA][colA]=cvide;
     }
 
-    void lirepiece(int ligneA, int colA) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String[] lirepiece(int ligneA, int colA) {
+        String[] tab = new String[2];
+        tab[0]=Cellules[ligneA][colA].lirecouleurpiece();
+        tab[1]=Cellules[ligneA][colA].liretypepiece();
+        return tab; // Lirepiece Renvoie un tableau contenant en [0] la couleur et en [1] le type de la pièce. ["vide","vide"] si case vide.
     }
 }
