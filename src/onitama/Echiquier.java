@@ -41,10 +41,10 @@ public class Echiquier {
 }
 
     void deplacerpiece(int ligneA, int colA, Pièces piece) { 
-        Cellules[ligneA][colA].affecterpiece(piece)
+        Cellules[ligneA][colA].affecterpiece(piece);
     }
 
-    void casenull(int ligneA, int colA) {
+    void casenull(int ligneA, int colA) { 
         Cellule cvide = new Cellule();
         Cellules[ligneA][colA]=cvide; //remplace la cellule avec une cellule vide nouvellement crée
     }
