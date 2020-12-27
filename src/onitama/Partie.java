@@ -118,9 +118,11 @@ public class Partie {
                 
                 //CAS 1 : la case est vide
                 if (GrilleDeJeu.Cellules[ligneB][colB].pieceCourante == null) {
-                    String[]piece=GrilleDeJeu.lirepiece(ligneA, colA); // ETAPE 1 : lire quelle pièce est sur la case, quelle
-                    String type = piece[1];
-                    GrilleDeJeu.deplacerpiece(ligneB,colB,type); // ETAPE 2 : lire 
+                    String[] piece=GrilleDeJeu.lirepiece(ligneA,colA);
+                    String couleur=piece[0];
+                    String type=piece[1];
+                    piece = new Pièces(couleur,type);
+                    GrilleDeJeu.deplacerpiece(ligneB,colB,type);
                     GrilleDeJeu.casenull(ligneA, colA);
                 }
                 
