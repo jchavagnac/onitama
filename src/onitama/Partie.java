@@ -118,7 +118,7 @@ public class Partie {
                 
                 //CAS 1 : la case est vide
                 if (GrilleDeJeu.Cellules[ligneB][colB].pieceCourante == null) {
-                    GrilleDeJeu.lirepiece(ligneA, colA);
+                    GrilleDeJeu.lirepiece(ligneA,colA);
                     GrilleDeJeu.deplacerpiece(ligneB,colB);
                     GrilleDeJeu.casenull(ligneA, colA);
                 }
