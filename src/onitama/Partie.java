@@ -125,7 +125,7 @@ public class Partie {
                     GrilleDeJeu.deplacerpiece(ligneB,colB,type);
                     GrilleDeJeu.casenull(ligneA, colA);
                 }
-                
+                fhcgjgchjgfcvhgvjhfghvjfhj
                 //CAS 2 : il y a un pion sur la case
                     // sous CAS 1 : c'est un pion
                     // sous CAS 2 : c'est un roi (Winning time)
