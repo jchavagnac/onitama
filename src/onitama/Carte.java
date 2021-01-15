@@ -11,14 +11,19 @@ package onitama;
  */
 public class Carte {
     int[][] tabDeplacement;
+    String nom;
     
-    
-    public Carte(int[][] tabDeplacement, String Nom){        
-        for (int i = 0; i<5; i++){
-            for (int j = 0; j<5; j++){
-                tabDeplacement[i][j] = 0;
+    public Carte(int[][] deplacement, String Nom){   
+        
+        int x = deplacement.length;
+        
+        deplacement = new int[x][2];
+        for (int i = 0; i< deplacement.length; i++){
+            for (int j = 0; j<2; j++){
+                tabDeplacement[i][j] = deplacement[i][j];
             }
         }
+        nom = Nom;
     }
     
     public void Motifcarte(Carte laCarte, int[][] deplacementjoueur){        
