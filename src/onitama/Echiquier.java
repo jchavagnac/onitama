@@ -15,8 +15,8 @@ public class Echiquier {
     
     
      public Echiquier(){// constructeur grille qui crée les cellules
-        for (int i=0;i<6;i++){
-            for (int j=0;j<7;j++){
+        for (int i=0;i<5;i++){
+            for (int j=0;j<5;j++){
                 Cellules[i][j]=new Cellule();
             }
         }
@@ -26,7 +26,7 @@ public class Echiquier {
             for (int i=0; i <5; i++) { 
                 for (int j=0;j < 5; j++){
                     if (Cellules[i][j].pieceCourante != null) {                   
-                        if (Cellules[i][j].pieceCourante.TYPE.equals("King"))
+                        if (Cellules[i][j].pieceCourante.TYPE.equals("Roi"))
                             System.out.print("\u001B[0m K ");
                         else{
                            System.out.print("\u001B[0m P "); 
@@ -67,4 +67,5 @@ public class Echiquier {
         tab[1]=Cellules[ligneA][colA].liretypepiece();
         return tab; // Lirepiece Renvoie un tableau contenant en [0] la couleur et en [1] le type de la pièce. ["vide","vide"] si case vide.
     }
+    
 }
