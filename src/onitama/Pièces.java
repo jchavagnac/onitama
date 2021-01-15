@@ -26,4 +26,6 @@ public String lireCouleur(){ //retourne la couleur
             return "\u001B[31m O "; // jaune pour le j1
         return "\u001B[33m O ";
     }
+
+
 }

@@ -21,17 +21,29 @@ public class Echiquier {
             }
         }
     }
-    public void afficherEchiquierSurConsole(){// affichage
-        for (int i=0; i <6; i++) { 
-            for (int j =0;j < 7; j++){
-                if (Cellules[i][j].pieceCourante != null) {                   
-                    System.out.print(Cellules[i][j].pieceCourante);
-                }
-                
-            }  
-        }System.out.println();// afficher le tout
+  
+    public void afficherEchiquierSurConsole(){
+            for (int i=0; i <5; i++) { 
+                for (int j=0;j < 5; j++){
+                    if (Cellules[i][j].pieceCourante != null) {                   
+                        if (Cellules[i][j].pieceCourante.TYPE.equals("King"))
+                            System.out.print("\u001B[0m K ");
+                        else{
+                           System.out.print("\u001B[0m P "); 
+                        }
+                    }else if(Cellules[i][j].templeRouge==true){
+                        System.out.print("\u001B[0m R ");
+                    }
+                    else if(Cellules[i][j].templeBleu==true){
+                        System.out.print("\u001B[0m B ");
+                    }
+                    
+                    else{
+                        System.out.print("\u001B[0m X ");
+                }  
+            }System.out.println();
+        }
     }
-    
     public void viderGrille(){ //Cette méthode vide la grille de son contenu
         for (int i=1; i<6;i++){
             for (int j=1;j<7;j++){

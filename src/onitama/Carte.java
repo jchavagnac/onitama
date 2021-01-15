@@ -12,7 +12,14 @@ package onitama;
 public class Carte {
     int[][] tabDeplacement;
     String nom;
-    
+    // chaque carte possede un motif propre en fonction du type de carte ( dragon,ours etc...)
+        public void Motifcarte(Carte laCarte, int[][] deplacementjoueur){        
+        for (int i=0; i< deplacementjoueur.length; i++){
+             int x = deplacementjoueur[i][0];
+             int y = deplacementjoueur[i][1];
+             laCarte.tabDeplacement[x][y]=1;       
+            }
+        } 
     public Carte(int[][] deplacement, String Nom){   
         
         int x = deplacement.length;
@@ -26,12 +33,6 @@ public class Carte {
         nom = Nom;
     }
     
-    public void Motifcarte(Carte laCarte, int[][] deplacementjoueur){        
-        for (int i=0; i< deplacementjoueur.length; i++){
-             int x = deplacementjoueur[i][0];
-             int y = deplacementjoueur[i][1];
-             laCarte.tabDeplacement[x][y]=1;       
-            }
-        }    
+   
     
 }   

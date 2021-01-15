@@ -13,6 +13,8 @@ public class Cellule {
     Cellule cellules;
     Pièces pieceCourante;
     
+    boolean templeBleu;
+    boolean templeRouge;
     
 
     public Cellule(){
