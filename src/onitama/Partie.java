@@ -117,8 +117,8 @@ public class Partie {
                 // DEPLACEMENT DU PION
                 
                 //CAS 1 : la case est vide
-                if (GrilleDeJeu.Cellules[ligneB][colB].pieceCourante == null) {
-                    String[] piece=GrilleDeJeu.lirepiece(ligneA,colA);
+                if (GrilleDeJeu.Cellules[ligneB][colB].pieceCourante == null) { // Ce qu'on fait ici est que l'on prend la case ou l'on souhaite deplacer la piece,
+                    String[] piece=GrilleDeJeu.lirepiece(ligneA,colA);          //on copie la piece sur cette case puis on supprime la pièce sur l'ancienne.
                     String couleur=piece[0];
                     String type=piece[1];
                     piece = new Pièces(couleur,type);
