@@ -124,14 +124,27 @@ public class Partie {
                     piece = new Pièces(couleur,type);
                     GrilleDeJeu.deplacerpiece(ligneB,colB,type);
                     GrilleDeJeu.casenull(ligneA, colA);
+                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[3][5]) {
+                    //victoire pour le joueur mais depend de quel joueur
                 }
-                fhcgjgchjgfcvhgvjhfghvjfhj
-                //CAS 2 : il y a un pion sur la case
-                    // sous CAS 1 : c'est un pion
-                    // sous CAS 2 : c'est un roi (Winning time)
-                    // sous CAS 3 : c'est une pièce appartenant au joueur courant
+                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[3][1]) {
+                    //victoire pour le joueur mais depend de quel joueur 
+                }
+                }
+                else{
+                    if ( {//pièce appartient au adverse joueur){
+                            
+                        //CAS 2 : il y a un pion sur la case
+                        // sous CAS 1 : c'est un pion
+                        // sous CAS 2 : c'est un roi (Winning time)
+                        // sous CAS 3 : c'est une pièce appartenant au joueur courant
                 
-                //CAS 3 : le roi bouge sur la case du temple (Winning time)
+                        //CAS 3 : le roi bouge sur la case du temple (Winning time)
+                    }
+                    else{
+                        
+                    }
+                }
 }  
             }
         }
