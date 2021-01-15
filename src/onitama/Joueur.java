@@ -13,7 +13,7 @@ public class Joueur {
    
    String nom;
    String couleur;
-   Pièces []ListePièces = new Pièces[5];
+   Pièces [] ListePièces = new Pièces[5];
    int nombrePiècesrestant;
    Joueur[] ListeJoueurs;
    ;
