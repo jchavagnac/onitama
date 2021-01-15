@@ -80,7 +80,8 @@ public class pioche {
         
     }
     public void melangerlaPioche(Carte [] Pioche) {
-        for (int i=0; i<25;i++){
+        for (int i=0; i<25;i++){ 
+// on melange la pioche en changeant de place dans le "tableau" 25 fois 2 cartes choisies au hasard
             Random R = new Random();
             int A = R.nextInt(15);
             Random R1 = new Random();
