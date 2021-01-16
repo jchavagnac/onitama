@@ -36,7 +36,30 @@ public class Partie {
     
     
     }
+    public void afficherCartesJoueur(Joueur unJoueur){
+        for (int i=0; i<2; i++){
+            System.out.println(unJoueur.listeCartes[i].nom);
+            for (int j = 0; j < unJoueur.listeCartes[i].tabDeplacement.length; j++){
+                for (int k = 0; k < unJoueur.listeCartes[i].tabDeplacement[j].length; k++){
+                    System.out.print(unJoueur.listeCartes[i].tabDeplacement[j][k]);
+                }System.out.println();            
+            }
+        } System.out.println();
+        System.out.println();
+    }
     
+    public void echangerCarte(Joueur joueurCourant, int numeroCarte ){        
+        Carte temp = joueurCourant.listeCartes[numeroCarte-1];
+        joueurCourant.listeCartes[numeroCarte-1] = GrilleDeJeu.Echiquier;
+        GrilleDeJeu.Echiquier = temp;               
+    }
+    
+    public void piocherCarte(Joueur unJoueur){        
+        for (int i=0; i < unJoueur.listeCartes.length; i++){
+            unJoueur.listeCartes[i] = piochePartie.cartePioche[0];
+            tasserPioche();
+        }
+    }
     public void initialiserPartie(){
         
         //Création ou réinitialisation de la grille de jeu
@@ -124,12 +147,7 @@ public class Partie {
                     piece = new Pièces(couleur,type);
                     GrilleDeJeu.deplacerpiece(ligneB,colB,type);
                     GrilleDeJeu.casenull(ligneA, colA);
-                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[3][5]) {
-                    //victoire pour le joueur mais depend de quel joueur
-                }
-                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[3][1]) {
-                    //victoire pour le joueur mais depend de quel joueur 
-                }
+                
                 }
                 else{
                     if ( {//pièce appartient au adverse joueur){
@@ -139,7 +157,14 @@ public class Partie {
                         // sous CAS 2 : c'est un roi (Winning time)
                         // sous CAS 3 : c'est une pièce appartenant au joueur courant
                 
-                        //CAS 3 : le roi bouge sur la case du temple (Winning time)
+                //CAS 3 : le roi bouge sur la case du temple (Winning time)
+                
+                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[4][2]) {
+                //victoire pour le joueur mais depend de quel joueur
+                        }
+                if (GrilleDeJeu.Cellules[ligneB][colB] == GrilleDeJeu.Cellules[0][2]) {
+                //victoire pour le joueur mais depend de quel joueur 
+                        }
                     }
                     else{
                         
