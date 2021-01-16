@@ -14,6 +14,7 @@ public class Joueur {
    String nom;
    String couleur;
    Pièces []ListePièces = new Pièces[5];
+   Carte[] listeCartes = new Carte[2];
    int nombrePiècesrestant;
    Joueur[] ListeJoueurs;
    ;
