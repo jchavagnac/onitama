@@ -12,6 +12,8 @@ package onitama;
 public class Echiquier {
     Pièces pieceCourante;
     Cellule [][]Cellules = new Cellule[5][5];
+    Carte Echiquier;
+        
     
     
      public Echiquier(){// constructeur grille qui crée les cellules
