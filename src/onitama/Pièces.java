@@ -12,20 +12,9 @@ package onitama;
 public class Pièces {
     String COULEUR;
     String TYPE;
-
-public Pièces(String couleur,String type) { //constructeur
-    COULEUR = couleur;
-    TYPE = type;
-}
-public String lireCouleur(){ //retourne la couleur
-        return COULEUR;
+      
+    public void Couleur(String uneCouleur){
+        COULEUR=uneCouleur;
     }
-@Override
-    public String toString(){// les couleurs des joueurs 
-        if("Rouge".equals(COULEUR))// rouge pour le joueur 2
-            return "\u001B[31m O "; // jaune pour le j1
-        return "\u001B[33m O ";
-    }
-
-
 }
+

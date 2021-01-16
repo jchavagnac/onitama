@@ -20,17 +20,18 @@ public class Joueur {
    ;
    
 public Joueur(String Nom){
-       nom = Nom;
+       this.nom = Nom;
      
    }
 public void affecterCouleur(String Couleur){
        this.couleur = Couleur;
    }
-    public void ajouter_pieces(Pièces jeton){// on ajoute les 21 jetons aux joueurs
-         for (int i=0;i<ListePièces.length;i++)
-            if (ListePièces[i]==null){
-                ListePièces[i]=jeton;
-                break;
-            }
-            }
+    public void ajouterpieces(Pièces jeton){ // chaque joueurs possede 5 pions dont 1 roi
+        for (int i=0; i<4; i++){            
+            this.ListePièces[i] = new Pièces();
+            this.ListePièces[i].TYPE = "Pion";
+        }
+        this.ListePièces[5] = new Pièces();
+        this.ListePièces[5].TYPE = "Roi";
+    }
 }

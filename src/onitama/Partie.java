@@ -84,8 +84,8 @@ public class Partie {
         for(int i = 0; i<6; i++){
             //rajoute une pièce
             
-            ListeJoueurs[0].ajouter_pieces(new Pièces(ListeJoueurs[0].couleur));
-            ListeJoueurs[1].ajouter_pieces(new Pièces(ListeJoueurs[1].couleur));
+            ListeJoueurs[0].ajouterpieces(new Pièces());
+            ListeJoueurs[1].ajouterpieces(new Pièces());
         }
 }
     public void debuterPartie(){
