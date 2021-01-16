@@ -53,7 +53,13 @@ public class Partie {
         joueurCourant.listeCartes[numeroCarte-1] = GrilleDeJeu.Echiquier;
         GrilleDeJeu.Echiquier = temp;               
     }
-    
+    public void tasserPioche(){
+        
+        for (int i=0; i < piochePartie.cartePioche.length-1; i++){
+            piochePartie.cartePioche[i] = piochePartie.cartePioche[i+1];            
+        }
+        piochePartie.cartePioche[piochePartie.cartePioche.length-1] = null;
+    }
     public void piocherCarte(Joueur unJoueur){        
         for (int i=0; i < unJoueur.listeCartes.length; i++){
             unJoueur.listeCartes[i] = piochePartie.cartePioche[0];
