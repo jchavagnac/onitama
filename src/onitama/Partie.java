@@ -17,7 +17,9 @@ public class Partie {
     Joueur []ListeJoueurs = new Joueur[2];//deux joueurs
     Echiquier GrilleDeJeu;
     Joueur JoueurCourant;
-    
+    pioche piochePartie = new pioche();
+    Pièces []Listepièce = new Pièces[5];
+    Pièces roi = (rouge, roi);
     public void attribuerCouleurAuxJoueurs(Joueur Joueur1, Joueur Joueur2){
         String Couleur1 = "\u001B[31m"+"O"+"\u001B[0m"; //Couleur rouge en unicode
         String Couleur2 = "\u001B[34m"+"O"+"\u001B[0m"; //Couleur bleu en unicode
@@ -34,8 +36,36 @@ public class Partie {
                    
         }
     
-    
     }
+    public void placerPieces(){
+        if (listeJoueurs[0].couleur.equals("Bleu")){
+            
+            GrilleDeJeu.Cellules[0][2].pieceCourante = ListeJoueurs[0].Listepièce[0];
+            GrilleDeJeu.Cellules[0][0].pieceCourante = ListeJoueurs[0].listePieces[1];
+            GrilleDeJeu.Cellules[0][1].pieceCourante = ListeJoueurs[0].listePieces[2];
+            GrilleDeJeu.Cellules[0][3].pieceCourante = ListeJoueurs[0].listePieces[3];
+            GrilleDeJeu.Cellules[0][4].pieceCourante = ListeJoueurs[0].listePieces[4];
+
+            GrilleDeJeu.Cellules[4][2].pieceCourante = ListeJoueurs[1].listePieces[0];
+            GrilleDeJeu.Cellules[4][0].pieceCourante = ListeJoueurs[1].listePieces[1];
+            GrilleDeJeu.Cellules[4][1].pieceCourante = ListeJoueurs[1].listePieces[2];
+            GrilleDeJeu.Cellules[4][3].pieceCourante = ListeJoueurs[1].listePieces[3];
+            GrilleDeJeu.Cellules[4][4].pieceCourante = ListeJoueurs[1].listePieces[4];
+        }
+        else{
+            GrilleDeJeu.Cellules[0][2].pieceCourante = ListeJoueurs[1].listePieces[0];
+            GrilleDeJeu.Cellules[0][0].pieceCourante = ListeJoueurs[1].listePieces[1];
+            GrilleDeJeu.Cellules[0][1].pieceCourante = ListeJoueurs[1].listePieces[2];
+            GrilleDeJeu.Cellules[0][3].pieceCourante = ListeJoueurs[1].listePieces[3];
+            GrilleDeJeu.Cellules[0][4].pieceCourante = ListeJoueurs[1].listePieces[4];
+
+            GrilleDeJeu.Cellules[4][2].pieceCourante = ListeJoueurs[0].listePieces[0];
+            GrilleDeJeu.Cellules[4][0].pieceCourante = ListeJoueurs[0].listePieces[1];
+            GrilleDeJeu.Cellules[4][1].pieceCourante = ListeJoueurs[0].listePieces[2];
+            GrilleDeJeu.Cellules[4][3].pieceCourante = ListeJoueurs[0].listePieces[3];
+            GrilleDeJeu.Cellules[4][4].pieceCourante = ListeJoueurs[0].listePieces[4];
+        }
+}
     public void afficherCartesJoueur(Joueur unJoueur){
         for (int i=0; i<2; i++){
             System.out.println(unJoueur.listeCartes[i].nom);
@@ -55,14 +85,14 @@ public class Partie {
     }
     public void tasserPioche(){
         
-        for (int i=0; i < piochePartie.cartePioche.length-1; i++){
-            piochePartie.cartePioche[i] = piochePartie.cartePioche[i+1];            
+        for (int i=0; i < piochePartie.Pioche.length-1; i++){
+            piochePartie.Pioche[i] = piochePartie.Pioche[i+1];            
         }
-        piochePartie.cartePioche[piochePartie.cartePioche.length-1] = null;
+        piochePartie.Pioche[piochePartie.Pioche.length-1] = null;
     }
     public void piocherCarte(Joueur unJoueur){        
         for (int i=0; i < unJoueur.listeCartes.length; i++){
-            unJoueur.listeCartes[i] = piochePartie.cartePioche[0];
+            unJoueur.listeCartes[i] = piochePartie.Pioche[0];
             tasserPioche();
         }
     }
@@ -150,7 +180,7 @@ public class Partie {
                     String[] piece=GrilleDeJeu.lirepiece(ligneA,colA);          //on copie la piece sur cette case puis on supprime la pièce sur l'ancienne.
                     String couleur=piece[0];
                     String type=piece[1];
-                    piece = new Pièces(couleur,type);
+                     = new Pièces(couleur,type);
                     GrilleDeJeu.deplacerpiece(ligneB,colB,type);
                     GrilleDeJeu.casenull(ligneA, colA);
                 

@@ -11,6 +11,7 @@ import java.util.Random;
  */
 public class pioche {
     Carte[] Pioche = new Carte[16];
+    
     public pioche()  {
     
         int[][] tabCobra = {{1,1},{1,-1},{-1,0}};

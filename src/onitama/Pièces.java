@@ -12,6 +12,12 @@ package onitama;
 public class Pièces {
     String COULEUR;
     String TYPE;
+
+    Pièces(String couleur, String type) {
+        this.couleur = couleur;
+        this.type = type;
+    }
+    
       
     public void Couleur(String uneCouleur){
         COULEUR=uneCouleur;
